@@ -1,0 +1,32 @@
+This app is meant as a method of messaging people on Airbnb (avoiding the 20 message/user and the 10 account/IP-address limits).  It accomplishes this by using AWS as a method of changing IP addresses.
+
+
+
+If anyone's actually interested in using this project, email me at [My First Name Initial][My Last Name] at gmail and I'll actually write a proper README write up.  Here's are some basic instructions to help you get started:
+
+1. Edit config/initializers/aws.rb with your own AWS access_key and secret.  As shown below.
+
+AWS.config(access_key_id: '<YOUR ACCESS KEY HERE>', secret_access_key: '<YOUR SECRET ACCESS KEY HERE>', region: 'us-west-1')
+
+2. You then need to setup the locations database.  First run.
+
+Location.load_csv (this will take a long time)
+
+3. Then run.
+
+Location.get_listings (this will also take a long time -- it's getting every listing in the U.S. from Airbnb's servers)
+
+4. Finally to send a message to a specific listing, call
+
+Message.send_airbnb_message(<listing>, "<your message>")
+
+5. Or to just send a generic message to every listing, edit INTRO_MESSAGE in app/models/message.rb with the generic message you'd like to send and then run
+
+Message.send_message
+
+(again, this will take a long time -- it's changing IPs and sending your message to every listing in the US)
+
+
+
+
+Note: usage of this application may constitute a breach of Airbnb's Terms of Service.  By using this project, you indemnify me of all responsibility.

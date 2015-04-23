@@ -1,0 +1,5 @@
+This app is meant as a method of messaging people on Airbnb (avoiding the 20 message/user and the 10 account/IP-address limits).  It accomplishes this by using AWS as a method of changing IP addresses.
+
+If anyone's actually interested in using this project, email me at [My First Name Initial][My Last Name] at gmail and I'll actually write a proper README write up.
+
+Note: usage of this application may constitute a breach of Airbnb's Terms of Service.  By using this project, you indemnify me of all responsibility.

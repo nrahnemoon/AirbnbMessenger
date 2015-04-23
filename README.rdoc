@@ -30,3 +30,5 @@ Message.send_message
 
 
 Note: usage of this application may constitute a breach of Airbnb's Terms of Service.  By using this project, you indemnify me of all responsibility.
+
+Also this app is Apache open source.  You can do whatever the hell you want with it. :D
